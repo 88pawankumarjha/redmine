@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2><%=h @status %></h2>
 
 <% if @message.present? %>
@@ -6,3 +7,13 @@
 <p><a href="javascript:history.back()"><%= l(:button_back) %></a></p>
 
 <% html_title @status %>
+=======
+<h2><%=h @status %></h2>
+
+<% if @message.present? %>
+  <p id="errorExplanation"><%=h @message %></p>
+<% end %>
+<p><a href="javascript:history.back()"><%= l(:button_back) %></a></p>
+
+<% html_title @status %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

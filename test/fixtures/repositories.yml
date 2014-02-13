@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 repositories_001: 
   project_id: 1
@@ -19,3 +20,26 @@ repositories_002:
   type: Repository::Subversion
   is_default: true
   created_on: 2006-07-19 19:04:21 +02:00
+=======
+--- 
+repositories_001: 
+  project_id: 1
+  url: file:///<%= Rails.root %>/tmp/test/subversion_repository
+  id: 10
+  root_url: file:///<%= Rails.root %>/tmp/test/subversion_repository
+  password: ""
+  login: ""
+  type: Repository::Subversion
+  is_default: true
+  created_on: 2006-07-19 19:04:21 +02:00
+repositories_002: 
+  project_id: 2
+  url: svn://localhost/test
+  id: 11
+  root_url: svn://localhost
+  password: ""
+  login: ""
+  type: Repository::Subversion
+  is_default: true
+  created_on: 2006-07-19 19:04:21 +02:00
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

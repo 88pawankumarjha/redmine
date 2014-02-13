@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 user_preferences_001: 
   others: |
@@ -29,3 +30,36 @@ user_preferences_002:
   id: 2
   user_id: 3
   hide_mail: false
+=======
+--- 
+user_preferences_001: 
+  others: |
+    --- 
+    :my_page_layout: 
+      left: 
+      - latestnews
+      - documents
+      right: 
+      - issuesassignedtome
+      top: 
+      - calendar
+
+  id: 1
+  user_id: 1
+  hide_mail: true
+user_preferences_002: 
+  others: |
+    --- 
+    :my_page_layout: 
+      left: 
+      - latestnews
+      - documents
+      right: 
+      - issuesassignedtome
+      top: 
+      - calendar
+  
+  id: 2
+  user_id: 3
+  hide_mail: false
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

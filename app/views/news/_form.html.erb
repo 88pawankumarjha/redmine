@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= error_messages_for @news %>
 
 <div class="box tabular">
@@ -8,3 +9,15 @@
 </div>
 
 <%= wikitoolbar_for 'news_description' %>
+=======
+<%= error_messages_for @news %>
+
+<div class="box tabular">
+<p><%= f.text_field :title, :required => true, :size => 60 %></p>
+<p><%= f.text_area :summary, :cols => 60, :rows => 2 %></p>
+<p><%= f.text_area :description, :required => true, :cols => 60, :rows => 15, :class => 'wiki-edit' %></p>
+<p id="attachments_form"><label><%= l(:label_attachment_plural) %></label><%= render :partial => 'attachments/form', :locals => {:container => @news} %></p>
+</div>
+
+<%= wikitoolbar_for 'news_description' %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

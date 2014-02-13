@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2><%= l(:label_repository) %></h2>
 
 <%= simple_format(l(:text_repository_usernames_mapping)) %>
@@ -40,3 +41,47 @@
 <% end %>
 
 <% end %>
+=======
+<h2><%= l(:label_repository) %></h2>
+
+<%= simple_format(l(:text_repository_usernames_mapping)) %>
+
+<% if @committers.empty? %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+<% else %>
+
+<%= form_tag({}) do %>
+<table class="list">
+<thead>
+  <tr>
+    <th><%= l(:field_login) %></th>
+    <th><%= l(:label_user) %></th>
+  </tr>
+</thead>
+<tbody>
+<% i = 0 -%>
+<% @committers.each do |committer, user_id| -%>
+  <tr class="<%= cycle 'odd', 'even' %>">
+    <td><%=h committer %></td>
+    <td>
+      <%= hidden_field_tag "committers[#{i}][]", committer %>
+      <%= select_tag "committers[#{i}][]",
+                      content_tag(
+                            'option',
+                            "-- #{l :actionview_instancetag_blank_option} --",
+                            :value => ''
+                          ) +
+                        options_from_collection_for_select(
+                            @users, 'id', 'name', user_id.to_i
+                          ) %>
+    </td>
+  </tr>
+  <% i += 1 -%>
+<% end -%>
+</tbody>
+</table>
+<p><%= submit_tag(l(:button_save)) %></p>
+<% end %>
+
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

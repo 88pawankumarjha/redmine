@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= title l(:label_plugins) %>
 
 <% if @plugins.any? %>
@@ -17,3 +18,24 @@
 <% else %>
 <p class="nodata"><%= l(:label_no_data) %></p>
 <% end %>
+=======
+<%= title l(:label_plugins) %>
+
+<% if @plugins.any? %>
+<table class="list plugins">
+    <% @plugins.each do |plugin| %>
+        <tr id="plugin-<%= plugin.id %>" class="<%= cycle('odd', 'even') %>">
+        <td class="name"><span class="name"><%=h plugin.name %></span>
+            <%= content_tag('span', h(plugin.description), :class => 'description') unless plugin.description.blank? %>
+            <%= content_tag('span', link_to(h(plugin.url), plugin.url), :class => 'url') unless plugin.url.blank? %>
+        </td>
+        <td class="author"><%= plugin.author_url.blank? ? h(plugin.author) : link_to(h(plugin.author), plugin.author_url) %></td>
+        <td class="version"><%=h plugin.version %></td>
+        <td class="configure"><%= link_to(l(:button_configure), plugin_settings_path(plugin)) if plugin.configurable? %></td>
+        </tr>
+    <% end %>
+</table>
+<% else %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

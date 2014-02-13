@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class AddRepositoriesCreatedOn < ActiveRecord::Migration
   def up
     add_column :repositories, :created_on, :timestamp
@@ -7,3 +8,14 @@ class AddRepositoriesCreatedOn < ActiveRecord::Migration
     remove_column :repositories, :created_on
   end
 end
+=======
+class AddRepositoriesCreatedOn < ActiveRecord::Migration
+  def up
+    add_column :repositories, :created_on, :timestamp
+  end
+
+  def down
+    remove_column :repositories, :created_on
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

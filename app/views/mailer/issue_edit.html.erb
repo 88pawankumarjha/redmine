@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if @journal.private_notes? %>
   (<%= l(:field_private_notes) %>)
 <% end %>
@@ -12,3 +13,19 @@
 <%= textilizable(@journal, :notes, :only_path => false) %>
 <hr />
 <%= render :partial => 'issue', :formats => [:html], :locals => { :issue => @issue, :users => @users, :issue_url => @issue_url } %>
+=======
+<% if @journal.private_notes? %>
+  (<%= l(:field_private_notes) %>)
+<% end %>
+<%= l(:text_issue_updated, :id => "##{@issue.id}", :author => h(@journal.user)) %>
+
+<ul>
+<% details_to_strings(@journal_details, false, :only_path => false).each do |string| %>
+  <li><%= string %></li>
+<% end %>
+</ul>
+
+<%= textilizable(@journal, :notes, :only_path => false) %>
+<hr />
+<%= render :partial => 'issue', :formats => [:html], :locals => { :issue => @issue, :users => @users, :issue_url => @issue_url } %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

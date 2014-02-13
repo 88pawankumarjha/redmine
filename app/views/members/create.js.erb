@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $('#tab-content-members').html('<%= escape_javascript(render :partial => 'projects/settings/members') %>');
 hideOnLoad();
 
@@ -9,3 +10,16 @@ hideOnLoad();
   <% errors = @members.collect {|m| m.errors.full_messages}.flatten.uniq.join(', ') %>
   alert('<%= raw(escape_javascript(l(:notice_failed_to_save_members, :errors => errors))) %>');
 <% end %>
+=======
+$('#tab-content-members').html('<%= escape_javascript(render :partial => 'projects/settings/members') %>');
+hideOnLoad();
+
+<% if @members.present? && @members.all? {|m| m.valid? } %>
+  <% @members.each do |member| %>
+    $("#member-<%= member.id %>").effect("highlight");
+  <% end %>
+<% else %>
+  <% errors = @members.collect {|m| m.errors.full_messages}.flatten.uniq.join(', ') %>
+  alert('<%= raw(escape_javascript(l(:notice_failed_to_save_members, :errors => errors))) %>');
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

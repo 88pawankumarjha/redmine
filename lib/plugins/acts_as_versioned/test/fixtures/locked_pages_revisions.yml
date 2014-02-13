@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 welcome_1:
   id: 1
   page_id: 1
@@ -25,3 +26,32 @@ thinking_2:
   title: So I was thinking
   version: 24
   version_type: SpecialLockedPage
+=======
+welcome_1:
+  id: 1
+  page_id: 1
+  title: Welcome to the weblg
+  version: 23
+  version_type: LockedPage
+
+welcome_2:
+  id: 2
+  page_id: 1
+  title: Welcome to the weblog
+  version: 24
+  version_type: LockedPage
+
+thinking_1:
+  id: 3
+  page_id: 2
+  title: So I was thinking!!!
+  version: 23
+  version_type: SpecialLockedPage
+
+thinking_2:
+  id: 4
+  page_id: 2
+  title: So I was thinking
+  version: 24
+  version_type: SpecialLockedPage
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

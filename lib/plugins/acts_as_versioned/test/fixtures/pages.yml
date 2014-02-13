@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 welcome:
   id: 1
   title: Welcome to the weblog
   body: Such a lovely day
   version: 24
   author_id: 1
+=======
+welcome:
+  id: 1
+  title: Welcome to the weblog
+  body: Such a lovely day
+  version: 24
+  author_id: 1
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff
   revisor_id: 1

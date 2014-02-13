@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 <%= labelled_fields_for :pref, @user.pref do |pref_fields| %>
 <p><%= pref_fields.check_box :hide_mail %></p>
 <p><%= pref_fields.time_zone_select :time_zone, nil, :include_blank => true %></p>
 <p><%= pref_fields.select :comments_sorting, [[l(:label_chronological_order), 'asc'], [l(:label_reverse_chronological_order), 'desc']] %></p>
 <p><%= pref_fields.check_box :warn_on_leaving_unsaved %></p>
 <% end %>
+=======
+<%= labelled_fields_for :pref, @user.pref do |pref_fields| %>
+<p><%= pref_fields.check_box :hide_mail %></p>
+<p><%= pref_fields.time_zone_select :time_zone, nil, :include_blank => true %></p>
+<p><%= pref_fields.select :comments_sorting, [[l(:label_chronological_order), 'asc'], [l(:label_reverse_chronological_order), 'desc']] %></p>
+<p><%= pref_fields.check_box :warn_on_leaving_unsaved %></p>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

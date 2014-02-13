@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="autoscroll">
 <table class="filecontent syntaxhl">
 <tbody>
@@ -16,3 +17,23 @@
 </tbody>
 </table>
 </div>
+=======
+<div class="autoscroll">
+<table class="filecontent syntaxhl">
+<tbody>
+<% line_num = 1 %>
+<% syntax_highlight_lines(filename, Redmine::CodesetUtil.to_utf8_by_setting(content)).each do |line| %>
+  <tr id="L<%= line_num %>">
+    <th class="line-num">
+      <a href="#L<%= line_num %>"><%= line_num %></a>
+    </th>
+    <td class="line-code">
+      <pre><%= line.html_safe %></pre>
+    </td>
+  </tr>
+  <% line_num += 1 %>
+<% end %>
+</tbody>
+</table>
+</div>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

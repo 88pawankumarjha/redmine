@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $('#relations').html('<%= escape_javascript(render :partial => 'issues/relations') %>');
 <% if @relation.errors.empty? %>
   $('#relation_delay').val('');
@@ -5,3 +6,12 @@ $('#relations').html('<%= escape_javascript(render :partial => 'issues/relations
   $('#relation_issue_to_id').focus();
 <% end %>
 $('#new-relation-form').show();
+=======
+$('#relations').html('<%= escape_javascript(render :partial => 'issues/relations') %>');
+<% if @relation.errors.empty? %>
+  $('#relation_delay').val('');
+  $('#relation_issue_to_id').val('');
+  $('#relation_issue_to_id').focus();
+<% end %>
+$('#new-relation-form').show();
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 issue_relation_001:
   id: 1
   issue_from_id: 10
@@ -10,3 +11,17 @@ issue_relation_002:
   issue_to_id: 3
   relation_type: relates
   delay:
+=======
+issue_relation_001:
+  id: 1
+  issue_from_id: 10
+  issue_to_id: 9
+  relation_type: blocks
+  delay:
+issue_relation_002:
+  id: 2
+  issue_from_id: 2
+  issue_to_id: 3
+  relation_type: relates
+  delay:
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

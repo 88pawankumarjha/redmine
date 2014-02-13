@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if @wiki && @wiki.sidebar -%>
   <%= textilizable @wiki.sidebar.content, :text %>
 <% end -%>
@@ -10,3 +11,17 @@
                   {:controller => 'wiki', :project_id => @project,
                    :action => 'date_index'}) %></li>
 </ul>
+=======
+<% if @wiki && @wiki.sidebar -%>
+  <%= textilizable @wiki.sidebar.content, :text %>
+<% end -%>
+
+<h3><%= l(:label_wiki) %></h3>
+<ul>
+  <li><%= link_to(l(:field_start_page), {:action => 'show', :id => nil}) %></li>
+  <li><%= link_to(l(:label_index_by_title), {:action => 'index'}) %></li>
+  <li><%= link_to(l(:label_index_by_date),
+                  {:controller => 'wiki', :project_id => @project,
+                   :action => 'date_index'}) %></li>
+</ul>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

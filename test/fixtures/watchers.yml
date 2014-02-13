@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 watchers_001: 
   watchable_type: Issue
@@ -11,3 +12,18 @@ watchers_003:
   watchable_type: Issue
   watchable_id: 2
   user_id: 1
+=======
+--- 
+watchers_001: 
+  watchable_type: Issue
+  watchable_id: 2
+  user_id: 3
+watchers_002: 
+  watchable_type: Message
+  watchable_id: 1
+  user_id: 1
+watchers_003: 
+  watchable_type: Issue
+  watchable_id: 2
+  user_id: 1
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

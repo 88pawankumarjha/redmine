@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="block_<%= block_name.dasherize %>" class="mypage-box">
 
     <div style="float:right;margin-right:16px;z-index:500;">
@@ -8,3 +9,15 @@
     <%= render :partial => "my/blocks/#{block_name}", :locals => { :user => user } %>
     </div>
 </div>
+=======
+<div id="block_<%= block_name.dasherize %>" class="mypage-box">
+
+    <div style="float:right;margin-right:16px;z-index:500;">
+    <%= link_to "", {:action => "remove_block", :block => block_name}, :method => 'post', :class => "close-icon" %>
+    </div>
+
+    <div class="handle">
+    <%= render :partial => "my/blocks/#{block_name}", :locals => { :user => user } %>
+    </div>
+</div>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

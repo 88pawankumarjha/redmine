@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 api.array :errors do
   @error_messages.each do |message|
     api.error message
   end
 end
+=======
+api.array :errors do
+  @error_messages.each do |message|
+    api.error message
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

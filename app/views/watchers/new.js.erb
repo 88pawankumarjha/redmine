@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 $('#ajax-modal').html('<%= escape_javascript(render :partial => 'watchers/new', :locals => {:watched => @watched}) %>');
 showModal('ajax-modal', '400px');
 $('#ajax-modal').addClass('new-watcher');
+=======
+$('#ajax-modal').html('<%= escape_javascript(render :partial => 'watchers/new', :locals => {:watched => @watched, :users => @users}) %>');
+showModal('ajax-modal', '400px');
+$('#ajax-modal').addClass('new-watcher');
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

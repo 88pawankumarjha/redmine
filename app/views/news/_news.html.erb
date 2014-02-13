@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 <p><%= link_to_project(news.project) + ': ' unless @project %>
 <%= link_to h(news.title), news_path(news) %>
 <%= "(#{l(:label_x_comments, :count => news.comments_count)})" if news.comments_count > 0 %>
 <br />
 <% unless news.summary.blank? %><span class="summary"><%=h news.summary %></span><br /><% end %>
 <span class="author"><%= authoring news.created_on, news.author %></span></p>
+=======
+<p><%= link_to_project(news.project) + ': ' unless @project %>
+<%= link_to h(news.title), news_path(news) %>
+<%= "(#{l(:label_x_comments, :count => news.comments_count)})" if news.comments_count > 0 %>
+<br />
+<% unless news.summary.blank? %><span class="summary"><%=h news.summary %></span><br /><% end %>
+<span class="author"><%= authoring news.created_on, news.author %></span></p>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

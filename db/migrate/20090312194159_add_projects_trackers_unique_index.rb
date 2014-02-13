@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class AddProjectsTrackersUniqueIndex < ActiveRecord::Migration
   def self.up
     remove_duplicates
@@ -19,3 +20,26 @@ class AddProjectsTrackersUniqueIndex < ActiveRecord::Migration
     end
   end
 end
+=======
+class AddProjectsTrackersUniqueIndex < ActiveRecord::Migration
+  def self.up
+    remove_duplicates
+    add_index :projects_trackers, [:project_id, :tracker_id], :name => :projects_trackers_unique, :unique => true
+  end
+
+  def self.down
+    remove_index :projects_trackers, :name => :projects_trackers_unique
+  end
+
+  # Removes duplicates in projects_trackers table
+  def self.remove_duplicates
+    Project.all.each do |project|
+      ids = project.trackers.collect(&:id)
+      unless ids == ids.uniq
+        project.trackers.clear
+        project.tracker_ids = ids.uniq
+      end
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

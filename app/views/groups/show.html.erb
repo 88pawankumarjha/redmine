@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= title [l(:label_group_plural), groups_path], @group.name %>
 
 <ul>
@@ -5,3 +6,12 @@
     <li><%=h user %></li>
 <% end %>
 </ul>
+=======
+<%= title [l(:label_group_plural), groups_path], @group.name %>
+
+<ul>
+<% @group.users.each do |user| %>
+    <li><%=h user %></li>
+<% end %>
+</ul>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

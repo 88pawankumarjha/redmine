@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="contextual">
 <%= form_tag(
        {:controller => 'repositories', :action => 'revision', :id => @project,
@@ -32,3 +33,39 @@
 <% end %>
 
 <% html_title(l(:label_revision_plural)) -%>
+=======
+<div class="contextual">
+<%= form_tag(
+       {:controller => 'repositories', :action => 'revision', :id => @project,
+        :repository_id => @repository.identifier_param},
+       :method => :get
+     ) do %>
+  <%= l(:label_revision) %>: <%= text_field_tag 'rev', nil, :size => 8 %>
+  <%= submit_tag 'OK' %>
+<% end %>
+</div>
+
+<h2><%= l(:label_revision_plural) %></h2>
+
+<%= render :partial => 'revisions',
+           :locals => {:project   => @project,
+                       :path      => '',
+                       :revisions => @changesets,
+                       :entry     => nil } %>
+
+<p class="pagination"><%= pagination_links_full @changeset_pages,@changeset_count %></p>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "scm" %>
+  <%= auto_discovery_link_tag(
+               :atom,
+               params.merge(
+                 {:format => 'atom', :page => nil, :key => User.current.rss_key})) %>
+<% end %>
+
+<% other_formats_links do |f| %>
+  <%= f.link_to 'Atom', :url => {:key => User.current.rss_key} %>
+<% end %>
+
+<% html_title(l(:label_revision_plural)) -%>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

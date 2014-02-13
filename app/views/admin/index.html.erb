@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2><%=l(:label_administration)%></h2>
 
 <div id="admin-index">
@@ -6,3 +7,13 @@
 </div>
 
 <% html_title(l(:label_administration)) -%>
+=======
+<h2><%=l(:label_administration)%></h2>
+
+<div id="admin-index">
+  <%= render :partial => 'no_data' if @no_configuration_data %>
+  <%= render :partial => 'menu' %>
+</div>
+
+<% html_title(l(:label_administration)) -%>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.array :memberships, api_meta(:total_count => @member_count, :offset => @offset, :limit => @limit) do
   @members.each do |membership|
     api.membership do
@@ -16,3 +17,23 @@ api.array :memberships, api_meta(:total_count => @member_count, :offset => @offs
     end
   end
 end
+=======
+api.array :memberships, api_meta(:total_count => @member_count, :offset => @offset, :limit => @limit) do
+  @members.each do |membership|
+    api.membership do
+      api.id membership.id
+      api.project :id => membership.project.id, :name => membership.project.name
+      api.__send__ membership.principal.class.name.underscore, :id => membership.principal.id, :name => membership.principal.name
+      api.array :roles do
+        membership.member_roles.each do |member_role|
+          if member_role.role
+            attrs = {:id => member_role.role.id, :name => member_role.role.name}
+            attrs.merge!(:inherited => true) if member_role.inherited_from.present?
+            api.role attrs
+          end 
+        end
+      end
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

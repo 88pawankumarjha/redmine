@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= call_hook(:view_repositories_show_contextual, { :repository => @repository, :project => @project }) %>
 
 <div class="contextual">
@@ -13,3 +14,20 @@
 <% content_for :header_tags do %>
 <%= stylesheet_link_tag "scm" %>
 <% end %>
+=======
+<%= call_hook(:view_repositories_show_contextual, { :repository => @repository, :project => @project }) %>
+
+<div class="contextual">
+  <%= render :partial => 'navigation' %>
+</div>
+
+<h2><%= render :partial => 'breadcrumbs', :locals => { :path => @path, :kind => 'file', :revision => @rev } %></h2>
+
+<%= render :partial => 'link_to_functions' %>
+
+<%= render :partial => 'common/file', :locals => {:filename => @path, :content => @content} %>
+
+<% content_for :header_tags do %>
+<%= stylesheet_link_tag "scm" %>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

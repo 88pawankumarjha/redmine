@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.array @klass.name.underscore.pluralize do
   @enumerations.each do |enumeration|
     api.__send__ @klass.name.underscore do
@@ -7,3 +8,14 @@ api.array @klass.name.underscore.pluralize do
     end
   end
 end
+=======
+api.array @klass.name.underscore.pluralize do
+  @enumerations.each do |enumeration|
+    api.__send__ @klass.name.underscore do
+      api.id enumeration.id
+      api.name enumeration.name
+      api.is_default enumeration.is_default
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

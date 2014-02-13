@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 default:
   somesetting: foo
   
@@ -7,3 +8,14 @@ development:
 
 test:
   somesetting: bar
+=======
+default:
+  somesetting: foo
+  
+production:
+
+development:
+
+test:
+  somesetting: bar
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

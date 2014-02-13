@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= title [l(@enumeration.option_name), enumerations_path], @enumeration.name %>
 
 <%= form_tag({}, :method => :delete) do %>
@@ -10,3 +11,17 @@
 <%= submit_tag l(:button_apply) %>
 <%= link_to l(:button_cancel), enumerations_path %>
 <% end %>
+=======
+<%= title [l(@enumeration.option_name), enumerations_path], @enumeration.name %>
+
+<%= form_tag({}, :method => :delete) do %>
+<div class="box">
+<p><strong><%= l(:text_enumeration_destroy_question, @enumeration.objects_count) %></strong></p>
+<p><label for='reassign_to_id'><%= l(:text_enumeration_category_reassign_to) %></label>
+<%= select_tag 'reassign_to_id', (content_tag('option', "--- #{l(:actionview_instancetag_blank_option)} ---", :value => '') + options_from_collection_for_select(@enumerations, 'id', 'name')) %></p>
+</div>
+
+<%= submit_tag l(:button_apply) %>
+<%= link_to l(:button_cancel), enumerations_path %>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Description:
     Generates a plugin model.
 
 Examples:
     ./script/rails generate redmine_plugin_model meetings pool
+=======
+Description:
+    Generates a plugin model.
+
+Examples:
+    ./script/rails generate redmine_plugin_model meetings pool
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= error_messages_for 'issue_status' %>
 
 <div class="box tabular">
@@ -10,3 +11,17 @@
 
 <%= call_hook(:view_issue_statuses_form, :issue_status => @issue_status) %>
 </div>
+=======
+<%= error_messages_for 'issue_status' %>
+
+<div class="box tabular">
+<p><%= f.text_field :name, :required => true %></p>
+<% if Issue.use_status_for_done_ratio? %>
+  <p><%= f.select :default_done_ratio, ((0..10).to_a.collect {|r| ["#{r*10} %", r*10] }), :include_blank => true, :label => :field_done_ratio %></p>
+<% end %>
+<p><%= f.check_box :is_closed %></p>
+<p><%= f.check_box :is_default %></p>
+
+<%= call_hook(:view_issue_statuses_form, :issue_status => @issue_status) %>
+</div>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

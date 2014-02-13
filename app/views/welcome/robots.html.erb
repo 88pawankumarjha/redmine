@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 User-agent: *
 <% @projects.each do |p| -%>
 Disallow: /projects/<%= p.to_param %>/repository
@@ -8,3 +9,15 @@ Disallow: /issues/gantt
 Disallow: /issues/calendar
 Disallow: /activity
 Disallow: /search
+=======
+User-agent: *
+<% @projects.each do |p| -%>
+Disallow: /projects/<%= p.to_param %>/repository
+Disallow: /projects/<%= p.to_param %>/issues
+Disallow: /projects/<%= p.to_param %>/activity
+<% end -%>
+Disallow: /issues/gantt
+Disallow: /issues/calendar
+Disallow: /activity
+Disallow: /search
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

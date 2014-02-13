@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.project do
   api.id          @project.id
   api.name        @project.name
@@ -23,3 +24,31 @@ api.project do
     end
   end if include_in_api_response?('issue_categories')
 end
+=======
+api.project do
+  api.id          @project.id
+  api.name        @project.name
+  api.identifier  @project.identifier
+  api.description @project.description
+  api.homepage    @project.homepage
+  api.parent(:id => @project.parent.id, :name => @project.parent.name) if @project.parent && @project.parent.visible?
+  api.status      @project.status
+
+  render_api_custom_values @project.visible_custom_field_values, api
+
+  api.created_on @project.created_on
+  api.updated_on @project.updated_on
+
+  api.array :trackers do
+    @project.trackers.each do |tracker|
+      api.tracker(:id => tracker.id, :name => tracker.name)
+    end
+  end if include_in_api_response?('trackers')
+
+  api.array :issue_categories do
+    @project.issue_categories.each do |category|
+      api.issue_category(:id => category.id, :name => category.name)
+    end
+  end if include_in_api_response?('issue_categories')
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

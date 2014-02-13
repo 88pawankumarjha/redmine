@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.array :versions, api_meta(:total_count => @versions.size) do
   @versions.each do |version|
     api.version do
@@ -17,3 +18,24 @@ api.array :versions, api_meta(:total_count => @versions.size) do
     end
   end
 end
+=======
+api.array :versions, api_meta(:total_count => @versions.size) do
+  @versions.each do |version|
+    api.version do
+      api.id version.id
+      api.project(:id => version.project_id, :name => version.project.name) unless version.project.nil?
+
+      api.name        version.name
+      api.description version.description
+      api.status      version.status
+      api.due_date    version.effective_date
+      api.sharing     version.sharing
+
+      render_api_custom_values version.custom_field_values, api
+
+      api.created_on version.created_on
+      api.updated_on version.updated_on
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

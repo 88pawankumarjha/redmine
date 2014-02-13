@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var fileSpan = $('#attachments_<%= j params[:attachment_id] %>');
 <% if @attachment.new_record? %>
   fileSpan.hide();
@@ -12,3 +13,19 @@ fileSpan.find('a.remove-upload')
   })
   .off('click');
 <% end %>
+=======
+var fileSpan = $('#attachments_<%= j params[:attachment_id] %>');
+<% if @attachment.new_record? %>
+  fileSpan.hide();
+  alert("<%= escape_javascript @attachment.errors.full_messages.join(', ') %>");
+<% else %>
+$('<input>', { type: 'hidden', name: 'attachments[<%= j params[:attachment_id] %>][token]' } ).val('<%= j @attachment.token %>').appendTo(fileSpan);
+fileSpan.find('a.remove-upload')
+  .attr({
+    "data-remote": true,
+    "data-method": 'delete',
+    href: '<%= j attachment_path(@attachment, :attachment_id => params[:attachment_id], :format => 'js') %>'
+  })
+  .off('click');
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

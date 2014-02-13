@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <% @users.each do |user| %>
   $("#issue_watcher_user_ids_<%= user.id %>").remove();
 <% end %>
 $('#watchers_inputs').append('<%= escape_javascript(watchers_checkboxes(nil, @users, true)) %>');
+=======
+<% @users.each do |user| %>
+  $("#issue_watcher_user_ids_<%= user.id %>").remove();
+<% end %>
+$('#watchers_inputs').append('<%= escape_javascript(watchers_checkboxes(nil, @users, true)) %>');
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

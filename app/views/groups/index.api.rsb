@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.array :groups do
   @groups.each do |group|
     api.group do
@@ -8,3 +9,15 @@ api.array :groups do
     end
   end
 end
+=======
+api.array :groups do
+  @groups.each do |group|
+    api.group do
+      api.id         group.id
+      api.name       group.lastname
+
+      render_api_custom_values group.visible_custom_field_values, api
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 caged:
   id: 1
   name: caged
 mly:
   id: 2
+=======
+caged:
+  id: 1
+  name: caged
+mly:
+  id: 2
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff
   name: mly

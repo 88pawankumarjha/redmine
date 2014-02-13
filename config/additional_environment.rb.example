@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Copy this file to additional_environment.rb and add any statements
 # that need to be passed to the Rails::Initializer.  `config` is
 # available in this context.
@@ -8,3 +9,15 @@
 #   ...
 #
 
+=======
+# Copy this file to additional_environment.rb and add any statements
+# that need to be passed to the Rails::Initializer.  `config` is
+# available in this context.
+#
+# Example:
+#
+#   config.log_level = :debug
+#   ...
+#
+
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Description:
     Generates a plugin controller.
 
 Example:
     ./script/rails generate redmine_plugin_controller meetings pools index show vote
+=======
+Description:
+    Generates a plugin controller.
+
+Example:
+    ./script/rails generate redmine_plugin_controller meetings pools index show vote
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

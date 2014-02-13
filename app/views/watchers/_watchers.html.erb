@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if User.current.allowed_to?(:add_issue_watchers, @project) %>
 <div class="contextual">
 <%= link_to l(:button_add),
@@ -10,3 +11,17 @@
 <h3><%= l(:label_issue_watchers) %> (<%= watched.watcher_users.size %>)</h3>
 
 <%= watchers_list(watched) %>
+=======
+<% if User.current.allowed_to?(:add_issue_watchers, @project) %>
+<div class="contextual">
+<%= link_to l(:button_add),
+      {:controller => 'watchers', :action => 'new', :object_type => watched.class.name.underscore, :object_id => watched},
+      :remote => true,
+      :method => 'get' %>
+</div>
+<% end %>
+
+<h3><%= l(:label_issue_watchers) %> (<%= watched.watcher_users.size %>)</h3>
+
+<%= watchers_list(watched) %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="contextual">
 <%= link_to l(:label_profile), user_path(@user), :class => 'icon icon-user' %>
 <%= change_status_link(@user) %>
@@ -7,3 +8,14 @@
 <%= title [l(:label_user_plural), users_path], @user.login %>
 
 <%= render_tabs user_settings_tabs %>
+=======
+<div class="contextual">
+<%= link_to l(:label_profile), user_path(@user), :class => 'icon icon-user' %>
+<%= change_status_link(@user) %>
+<%= delete_link user_path(@user) if User.current != @user %>
+</div>
+
+<%= title [l(:label_user_plural), users_path], @user.login %>
+
+<%= render_tabs user_settings_tabs %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

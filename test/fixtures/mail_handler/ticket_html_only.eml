@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 x-sender: <jsmith@somenet.foo>
 x-receiver: <redmine@somenet.foo>
 Received: from [127.0.0.1] ([127.0.0.1]) by somenet.foo with Quick 'n Easy Mail Server SMTP (1.0.0.0);
@@ -20,3 +21,27 @@ Content-Transfer-Encoding: 7bit
 This is a <b>html-only</b> email.<br>
 </body>
 </html>
+=======
+x-sender: <jsmith@somenet.foo>
+x-receiver: <redmine@somenet.foo>
+Received: from [127.0.0.1] ([127.0.0.1]) by somenet.foo with Quick 'n Easy Mail Server SMTP (1.0.0.0);
+	Sun, 14 Dec 2008 16:18:06 GMT
+Message-ID: <494531B9.1070709@somenet.foo>
+Date: Sun, 14 Dec 2008 17:18:01 +0100
+From: "John Smith" <jsmith@somenet.foo>
+User-Agent: Thunderbird 2.0.0.18 (Windows/20081105)
+MIME-Version: 1.0
+To: redmine@somenet.foo
+Subject: HTML email
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+This is a <b>html-only</b> email.<br>
+</body>
+</html>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

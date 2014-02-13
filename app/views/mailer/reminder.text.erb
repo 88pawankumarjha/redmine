@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= l(:mail_body_reminder, :count => @issues.size, :days => @days) %>:
 
 <% @issues.each do |issue| -%>
@@ -5,3 +6,12 @@
 <% end -%>
 
 <%= @issues_url %>
+=======
+<%= l(:mail_body_reminder, :count => @issues.size, :days => @days) %>:
+
+<% @issues.each do |issue| -%>
+* <%= "#{issue.project} - #{issue.tracker} ##{issue.id}: #{issue.subject}" %>
+<% end -%>
+
+<%= @issues_url %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Loads the core plugins located in lib/plugins
 Dir.glob(File.join(Rails.root, "lib/plugins/*")).sort.each do |directory|
   if File.directory?(directory)
@@ -13,3 +14,20 @@ Dir.glob(File.join(Rails.root, "lib/plugins/*")).sort.each do |directory|
     end
   end
 end
+=======
+# Loads the core plugins located in lib/plugins
+Dir.glob(File.join(Rails.root, "lib/plugins/*")).sort.each do |directory|
+  if File.directory?(directory)
+    lib = File.join(directory, "lib")
+    if File.directory?(lib)
+      $:.unshift lib
+      ActiveSupport::Dependencies.autoload_paths += [lib]
+    end
+    initializer = File.join(directory, "init.rb")
+    if File.file?(initializer)
+      config = RedmineApp::Application.config
+      eval(File.read(initializer), binding, initializer)
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

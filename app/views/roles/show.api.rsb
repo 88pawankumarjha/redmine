@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.role do
   api.id @role.id
   api.name @role.name
@@ -7,3 +8,14 @@ api.role do
     end
   end
 end
+=======
+api.role do
+  api.id @role.id
+  api.name @role.name
+  api.array :permissions do
+    @role.permissions.each do |perm|
+      api.permission(perm.to_s)
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

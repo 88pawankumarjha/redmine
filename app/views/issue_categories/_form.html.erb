@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 <%= error_messages_for 'category' %>
 
 <div class="box tabular">
 <p><%= f.text_field :name, :size => 30, :required => true %></p>
 <p><%= f.select :assigned_to_id, principals_options_for_select(@project.assignable_users, @category.assigned_to), :include_blank => true %></p>
 </div>
+=======
+<%= error_messages_for 'category' %>
+
+<div class="box tabular">
+<p><%= f.text_field :name, :size => 30, :required => true %></p>
+<p><%= f.select :assigned_to_id, principals_options_for_select(@project.assignable_users, @category.assigned_to), :include_blank => true %></p>
+</div>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

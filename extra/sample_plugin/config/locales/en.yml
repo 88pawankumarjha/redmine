@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 # Sample plugin
 en:
   label_plugin_example: Sample Plugin
   label_meeting_plural: Meetings
   text_say_hello: Plugin say 'Hello'
   text_say_goodbye: Plugin say 'Good bye'
+=======
+# Sample plugin
+en:
+  label_plugin_example: Sample Plugin
+  label_meeting_plural: Meetings
+  text_say_hello: Plugin say 'Hello'
+  text_say_goodbye: Plugin say 'Good bye'
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 trackers_001: 
   name: Bug
@@ -14,3 +15,21 @@ trackers_003:
   id: 3
   is_in_chlog: false
   position: 3
+=======
+--- 
+trackers_001: 
+  name: Bug
+  id: 1
+  is_in_chlog: true
+  position: 1
+trackers_002: 
+  name: Feature request
+  id: 2
+  is_in_chlog: true
+  position: 2
+trackers_003: 
+  name: Support request
+  id: 3
+  is_in_chlog: false
+  position: 3
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

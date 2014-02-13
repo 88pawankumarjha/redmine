@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.array :trackers do
   @trackers.each do |tracker|
     api.tracker do
@@ -6,3 +7,13 @@ api.array :trackers do
     end
   end
 end
+=======
+api.array :trackers do
+  @trackers.each do |tracker|
+    api.tracker do
+      api.id tracker.id
+      api.name tracker.name
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2><%=l(:label_report_plural)%></h2>
 
 <h3><%=@report_title%></h3>
@@ -5,3 +6,12 @@
 <br />
 <%= link_to l(:button_back), project_issues_report_path(@project) %>
 
+=======
+<h2><%=l(:label_report_plural)%></h2>
+
+<h3><%=@report_title%></h3>
+<%= render :partial => 'details', :locals => { :data => @data, :field_name => @field, :rows => @rows } %>
+<br />
+<%= link_to l(:button_back), project_issues_report_path(@project) %>
+
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

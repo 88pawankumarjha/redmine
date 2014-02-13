@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= wiki_page_breadcrumb(@page) %>
 
 <h2><%= h @original_title %></h2>
@@ -19,3 +20,26 @@
 </div>
 <%= submit_tag l(:button_rename) %>
 <% end %>
+=======
+<%= wiki_page_breadcrumb(@page) %>
+
+<h2><%= h @original_title %></h2>
+
+<%= error_messages_for 'page' %>
+
+<%= labelled_form_for :wiki_page, @page,
+                     :url => { :action => 'rename' },
+                     :html => { :method => :post } do |f| %>
+<div class="box tabular">
+<p><%= f.text_field :title, :required => true, :size => 100  %></p>
+<p><%= f.check_box :redirect_existing_links %></p>
+<p><%= f.select :parent_id,
+                content_tag('option', '', :value => '') + 
+                  wiki_page_options_for_select(
+                    @wiki.pages.includes(:parent).all - @page.self_and_descendants,
+                    @page.parent),
+                :label => :field_parent_title %></p>
+</div>
+<%= submit_tag l(:button_rename) %>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

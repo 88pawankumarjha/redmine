@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 #!/usr/bin/env ruby
 
 ENV["RAILS_ENV"] ||= "production"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 puts
 puts Redmine::Info.environment
+=======
+#!/usr/bin/env ruby
+
+ENV["RAILS_ENV"] ||= "production"
+require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
+puts
+puts Redmine::Info.environment
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ChangeChangesetsRevisionToString < ActiveRecord::Migration
   def self.up
     # Some backends (eg. SQLServer 2012) do not support changing the type
@@ -30,3 +31,37 @@ class ChangeChangesetsRevisionToString < ActiveRecord::Migration
     add_index :changesets, [:repository_id, :revision], :unique => true, :name => :changesets_repos_rev
   end
 end
+=======
+class ChangeChangesetsRevisionToString < ActiveRecord::Migration
+  def self.up
+    # Some backends (eg. SQLServer 2012) do not support changing the type
+    # of an indexed column so the index needs to be dropped first
+    # BUT this index is renamed with some backends (at least SQLite3) for
+    # some (unknown) reasons, thus we check for the other name as well
+    # so we don't end up with 2 identical indexes
+    if index_exists? :changesets, [:repository_id, :revision], :name => :changesets_repos_rev
+      remove_index  :changesets, :name => :changesets_repos_rev
+    end
+    if index_exists? :changesets, [:repository_id, :revision], :name => :altered_changesets_repos_rev
+      remove_index  :changesets, :name => :altered_changesets_repos_rev
+    end
+
+    change_column :changesets, :revision, :string, :null => false
+
+    add_index :changesets, [:repository_id, :revision], :unique => true, :name => :changesets_repos_rev
+  end
+
+  def self.down
+    if index_exists? :changesets, :changesets_repos_rev
+      remove_index  :changesets, :name => :changesets_repos_rev
+    end
+    if index_exists? :changesets, [:repository_id, :revision], :name => :altered_changesets_repos_rev
+      remove_index  :changesets, :name => :altered_changesets_repos_rev
+    end
+
+    change_column :changesets, :revision, :integer, :null => false
+
+    add_index :changesets, [:repository_id, :revision], :unique => true, :name => :changesets_repos_rev
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

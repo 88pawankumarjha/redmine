@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= title [l(:label_auth_source_plural), auth_sources_path], "#{l(:label_auth_source_new)} (#{@auth_source.auth_method_name})" %>
 
 <%= labelled_form_for @auth_source, :as => :auth_source, :url => auth_sources_path, :html => {:id => 'auth_source_form'} do |f| %>
@@ -5,3 +6,12 @@
   <%= render :partial => auth_source_partial_name(@auth_source), :locals => { :f => f } %>
   <%= submit_tag l(:button_create) %>
 <% end %>
+=======
+<%= title [l(:label_auth_source_plural), auth_sources_path], "#{l(:label_auth_source_new)} (#{@auth_source.auth_method_name})" %>
+
+<%= labelled_form_for @auth_source, :as => :auth_source, :url => auth_sources_path, :html => {:id => 'auth_source_form'} do |f| %>
+  <%= hidden_field_tag 'type', @auth_source.type %>
+  <%= render :partial => auth_source_partial_name(@auth_source), :locals => { :f => f } %>
+  <%= submit_tag l(:button_create) %>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

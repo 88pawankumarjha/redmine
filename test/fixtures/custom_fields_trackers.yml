@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 custom_fields_trackers_001: 
   custom_field_id: 1
@@ -26,3 +27,33 @@ custom_fields_trackers_008:
 custom_fields_trackers_009: 
   custom_field_id: 8
   tracker_id: 3
+=======
+--- 
+custom_fields_trackers_001: 
+  custom_field_id: 1
+  tracker_id: 1
+custom_fields_trackers_002: 
+  custom_field_id: 2
+  tracker_id: 1
+custom_fields_trackers_003: 
+  custom_field_id: 2
+  tracker_id: 3
+custom_fields_trackers_004: 
+  custom_field_id: 6
+  tracker_id: 1
+custom_fields_trackers_005: 
+  custom_field_id: 6
+  tracker_id: 2
+custom_fields_trackers_006: 
+  custom_field_id: 6
+  tracker_id: 3
+custom_fields_trackers_007: 
+  custom_field_id: 8
+  tracker_id: 1
+custom_fields_trackers_008: 
+  custom_field_id: 8
+  tracker_id: 2
+custom_fields_trackers_009: 
+  custom_field_id: 8
+  tracker_id: 3
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

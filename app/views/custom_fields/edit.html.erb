@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= title [l(:label_custom_field_plural), custom_fields_path],
   [l(@custom_field.type_name), custom_fields_path(:tab => @custom_field.class.name)],
   @custom_field.name %>
@@ -5,3 +6,12 @@
 <%= labelled_form_for :custom_field, @custom_field, :url => custom_field_path(@custom_field), :html => {:method => :put, :id => 'custom_field_form'} do |f| %>
 <%= render :partial => 'form', :locals => { :f => f } %>
 <% end %>
+=======
+<%= title [l(:label_custom_field_plural), custom_fields_path],
+  [l(@custom_field.type_name), custom_fields_path(:tab => @custom_field.class.name)],
+  @custom_field.name %>
+
+<%= labelled_form_for :custom_field, @custom_field, :url => custom_field_path(@custom_field), :html => {:method => :put, :id => 'custom_field_form'} do |f| %>
+<%= render :partial => 'form', :locals => { :f => f } %>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

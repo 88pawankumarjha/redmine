@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.array :roles do
   @roles.each do |role|
     api.role do
@@ -6,3 +7,13 @@ api.array :roles do
     end
   end
 end
+=======
+api.array :roles do
+  @roles.each do |role|
+    api.role do
+      api.id role.id
+      api.name role.name
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

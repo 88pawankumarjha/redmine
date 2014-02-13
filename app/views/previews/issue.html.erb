@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if @notes %>
   <fieldset class="preview"><legend><%= l(:field_notes) %></legend>
     <%= textilizable @notes, :attachments => @attachments, :object => @issue %>
@@ -9,3 +10,16 @@
     <%= textilizable @description, :attachments => @attachments, :object => @issue %>
   </fieldset>
 <% end %>
+=======
+<% if @notes %>
+  <fieldset class="preview"><legend><%= l(:field_notes) %></legend>
+    <%= textilizable @notes, :attachments => @attachments, :object => @issue %>
+  </fieldset>
+<% end %>
+
+<% if @description %>
+  <fieldset class="preview"><legend><%= l(:field_description) %></legend>
+    <%= textilizable @description, :attachments => @attachments, :object => @issue %>
+  </fieldset>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

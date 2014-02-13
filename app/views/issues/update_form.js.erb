@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 replaceIssueFormWith('<%= escape_javascript(render :partial => 'form') %>');
 
 <% if User.current.allowed_to?(:log_time, @issue.project) %>
@@ -5,3 +6,12 @@ replaceIssueFormWith('<%= escape_javascript(render :partial => 'form') %>');
 <% else %>
   $('#log_time').hide();
 <% end %>
+=======
+replaceIssueFormWith('<%= escape_javascript(render :partial => 'form') %>');
+
+<% if User.current.allowed_to?(:log_time, @issue.project) %>
+  $('#log_time').show();
+<% else %>
+  $('#log_time').hide();
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

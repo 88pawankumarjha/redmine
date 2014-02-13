@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= raw @issues.map {|issue| {
       'id' => issue.id,
       'label' => "#{issue.tracker} ##{issue.id}: #{truncate issue.subject.to_s, :length => 60}",
@@ -5,3 +6,12 @@
       }
     }.to_json
 %>
+=======
+<%= raw @issues.map {|issue| {
+      'id' => issue.id,
+      'label' => "#{issue.tracker} ##{issue.id}: #{issue.subject.to_s.truncate(60)}",
+      'value' => issue.id
+      }
+    }.to_json
+%>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

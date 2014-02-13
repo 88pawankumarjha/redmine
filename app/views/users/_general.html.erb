@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= labelled_form_for @user do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <% if @user.active? && email_delivery_enabled? -%>
@@ -5,3 +6,12 @@
   <% end -%>
   <p><%= submit_tag l(:button_save) %></p>
 <% end %>
+=======
+<%= labelled_form_for @user do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <% if @user.active? && email_delivery_enabled? -%>
+    <p><label><%= check_box_tag 'send_information', 1, true %> <%= l(:label_send_information) %></label></p>
+  <% end -%>
+  <p><%= submit_tag l(:button_save) %></p>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

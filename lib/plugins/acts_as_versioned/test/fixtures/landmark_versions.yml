@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 washington:
     id: 1
     landmark_id: 1
@@ -5,3 +6,12 @@ washington:
     name: Washington, D.C.
     latitude: 38.895
     longitude: -77.036667
+=======
+washington:
+    id: 1
+    landmark_id: 1
+    version: 1
+    name: Washington, D.C.
+    latitude: 38.895
+    longitude: -77.036667
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

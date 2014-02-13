@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 <h3><%= l(:label_calendar) %></h3>
 
 <% calendar = Redmine::Helpers::Calendar.new(Date.today, current_language, :week)
    calendar.events = calendar_items(calendar.startdt, calendar.enddt) %>
 
 <%= render :partial => 'common/calendar', :locals => {:calendar => calendar } %>
+=======
+<h3><%= l(:label_calendar) %></h3>
+
+<% calendar = Redmine::Helpers::Calendar.new(Date.today, current_language, :week)
+   calendar.events = calendar_items(calendar.startdt, calendar.enddt) %>
+
+<%= render :partial => 'common/calendar', :locals => {:calendar => calendar } %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

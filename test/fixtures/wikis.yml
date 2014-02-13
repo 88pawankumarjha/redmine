@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 wikis_001: 
   status: 1
@@ -9,3 +10,16 @@ wikis_002:
   start_page: Start page
   project_id: 2
   id: 2
+=======
+--- 
+wikis_001: 
+  status: 1
+  start_page: CookBook documentation
+  project_id: 1
+  id: 1
+wikis_002: 
+  status: 1
+  start_page: Start page
+  project_id: 2
+  id: 2
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

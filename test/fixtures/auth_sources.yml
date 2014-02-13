@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 auth_sources_001: 
   id: 1
@@ -11,3 +12,18 @@ auth_sources_001:
   attr_lastname: sn
   attr_mail: mail
   onthefly_register: false
+=======
+--- 
+auth_sources_001: 
+  id: 1
+  type: AuthSourceLdap
+  name: 'LDAP test server'
+  host: '127.0.0.1'
+  port: 389
+  base_dn: 'OU=Person,DC=redmine,DC=org'
+  attr_login: uid
+  attr_firstname: givenName
+  attr_lastname: sn
+  attr_mail: mail
+  onthefly_register: false
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

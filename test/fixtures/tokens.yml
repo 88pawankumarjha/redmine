@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 tokens_001: 
   created_on: 2007-01-21 00:39:12 +01:00
@@ -11,3 +12,18 @@ tokens_002:
   id: 2
   value: sahYSIaoYrsZUef86sTHrLISdznW6ApF36h5WSnm
   user_id: 2
+=======
+--- 
+tokens_001: 
+  created_on: 2007-01-21 00:39:12 +01:00
+  action: register
+  id: 1
+  value: DwMJ2yIxBNeAk26znMYzYmz5dAiIina0GFrPnGTM
+  user_id: 1
+tokens_002: 
+  created_on: 2007-01-21 00:39:52 +01:00
+  action: recovery
+  id: 2
+  value: sahYSIaoYrsZUef86sTHrLISdznW6ApF36h5WSnm
+  user_id: 2
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

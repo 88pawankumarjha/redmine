@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="autoscroll">
 <table class="list entries" id="browser">
 <thead>
@@ -17,3 +18,24 @@
 </tbody>
 </table>
 </div>
+=======
+<div class="autoscroll">
+<table class="list entries" id="browser">
+<thead>
+<tr id="root">
+<th><%= l(:field_name) %></th>
+<th><%= l(:field_filesize) %></th>
+<% if @repository.report_last_commit %>
+<th><%= l(:label_revision)  %></th>
+<th><%= l(:label_age)       %></th>
+<th><%= l(:field_author)    %></th>
+<th><%= l(:field_comments)  %></th>
+<% end %>
+</tr>
+</thead>
+<tbody>
+<%= render :partial => 'dir_list_content' %>
+</tbody>
+</table>
+</div>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

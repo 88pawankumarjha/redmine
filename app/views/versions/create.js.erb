@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 hideModal();
 <% select = content_tag('select', content_tag('option') + version_options_for_select(@project.shared_versions.open, @version), :id => 'issue_fixed_version_id', :name => 'issue[fixed_version_id]') %>
 $('#issue_fixed_version_id').replaceWith('<%= escape_javascript(select) %>');
+=======
+hideModal();
+<% select = content_tag('select', content_tag('option') + version_options_for_select(@project.shared_versions.open, @version), :id => 'issue_fixed_version_id', :name => 'issue[fixed_version_id]') %>
+$('#issue_fixed_version_id').replaceWith('<%= escape_javascript(select) %>');
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= title [l(@enumeration.option_name), enumerations_path], l(:label_enumeration_new) %>
 
 <%= labelled_form_for :enumeration, @enumeration, :url => enumerations_path do |f| %>
@@ -5,3 +6,12 @@
   <%= render :partial => 'form', :locals => {:f => f} %>
   <%= submit_tag l(:button_create) %>
 <% end %>
+=======
+<%= title [l(@enumeration.option_name), enumerations_path], l(:label_enumeration_new) %>
+
+<%= labelled_form_for :enumeration, @enumeration, :url => enumerations_path do |f| %>
+  <%= f.hidden_field :type  %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <%= submit_tag l(:button_create) %>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

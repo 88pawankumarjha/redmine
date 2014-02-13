@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Message-ID: <4974C93E.3070005@somenet.foo>
 Date: Mon, 19 Jan 2009 19:41:02 +0100
 From: "John Smith" <jsmith@somenet.foo>
@@ -13,3 +14,20 @@ Content-Transfer-Encoding: 7bit
 This is a reply to a forum message.
 
 
+=======
+Message-ID: <4974C93E.3070005@somenet.foo>
+Date: Mon, 19 Jan 2009 19:41:02 +0100
+From: "John Smith" <jsmith@somenet.foo>
+User-Agent: Thunderbird 2.0.0.19 (Windows/20081209)
+MIME-Version: 1.0
+To: redmine@somenet.foo
+Subject: Reply via email
+References: <redmine.message-2.20070512171800@somenet.foo>
+In-Reply-To: <redmine.message-2.20070512171800@somenet.foo>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+This is a reply to a forum message.
+
+
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

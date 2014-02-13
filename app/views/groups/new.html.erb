@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= title [l(:label_group_plural), groups_path], l(:label_group_new) %>
 
 <%= labelled_form_for @group do |f| %>
@@ -7,3 +8,14 @@
   <%= f.submit l(:button_create_and_continue), :name => 'continue' %>
 </p>
 <% end %>
+=======
+<%= title [l(:label_group_plural), groups_path], l(:label_group_new) %>
+
+<%= labelled_form_for @group do |f| %>
+<%= render :partial => 'form', :locals => { :f => f } %>
+<p>
+  <%= f.submit l(:button_create) %>
+  <%= f.submit l(:button_create_and_continue), :name => 'continue' %>
+</p>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

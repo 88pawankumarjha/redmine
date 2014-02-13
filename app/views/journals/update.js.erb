@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if @journal.frozen? %>
   $("#change-<%= @journal.id %>").remove();
 <% else %>
@@ -7,3 +8,14 @@
 <% end %>
 
 <%= call_hook(:view_journals_update_js_bottom, { :journal => @journal }) %>
+=======
+<% if @journal.frozen? %>
+  $("#change-<%= @journal.id %>").remove();
+<% else %>
+  $("#journal-<%= @journal.id %>-notes").replaceWith('<%= escape_javascript(render_notes(@journal.issue, @journal, :reply_links => authorize_for('issues', 'edit'))) %>');
+  $("#journal-<%= @journal.id %>-notes").show();
+  $("#journal-<%= @journal.id %>-form").remove();
+<% end %>
+
+<%= call_hook(:view_journals_update_js_bottom, { :journal => @journal }) %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

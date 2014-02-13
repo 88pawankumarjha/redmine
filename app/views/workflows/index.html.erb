@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= title [l(:label_workflow), workflows_edit_path], l(:field_summary) %>
 
 <% if @workflow_counts.empty? %>
@@ -31,3 +32,38 @@
 </table>
 </div>
 <% end %>
+=======
+<%= title [l(:label_workflow), workflows_edit_path], l(:field_summary) %>
+
+<% if @workflow_counts.empty? %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+<% else %>
+<div class="autoscroll">
+<table class="list">
+<thead>
+    <tr>
+    <th></th>
+    <% @workflow_counts.first.last.each do |role, count| %>
+    <th>
+        <%= content_tag(role.builtin? ? 'em' : 'span', h(role.name)) %>
+    </th>
+
+    <% end %>
+    </tr>
+</thead>
+<tbody>
+<% @workflow_counts.each do |tracker, roles| -%>
+<tr class="<%= cycle('odd', 'even') %>">
+  <td class="name"><%= h tracker %></td>
+  <% roles.each do |role, count| -%>
+    <td>
+      <%= link_to((count > 0 ? count : image_tag('false.png')), {:action => 'edit', :role_id => role, :tracker_id => tracker}, :title => l(:button_edit)) %>
+    </td>
+  <% end -%>
+</tr>
+<% end -%>
+</tbody>
+</table>
+</div>
+<% end %>
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

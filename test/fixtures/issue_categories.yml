@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --- 
 issue_categories_001: 
   name: Printing
@@ -19,3 +20,26 @@ issue_categories_004:
   project_id: 2
   assigned_to_id: 
   id: 4
+=======
+--- 
+issue_categories_001: 
+  name: Printing
+  project_id: 1
+  assigned_to_id: 2
+  id: 1
+issue_categories_002: 
+  name: Recipes
+  project_id: 1
+  assigned_to_id: 
+  id: 2
+issue_categories_003: 
+  name: Stock management
+  project_id: 2
+  assigned_to_id: 
+  id: 3
+issue_categories_004: 
+  name: Printing
+  project_id: 2
+  assigned_to_id: 
+  id: 4
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 From: John Smith <JSmith@somenet.foo>
 To: "redmine@somenet.foo" <redmine@somenet.foo>
 Subject: Re: =?iso-2022-jp?b?GyRCJUYlOSVIGyhCCg=?=
@@ -5,3 +6,12 @@ Date: Fri, 1 Jun 2012 14:39:38 +0200
 Message-ID: <87C31D42249DD0489D1A1444E3232DD7019D6183@foo.bar>
 
 Fixture
+=======
+From: John Smith <JSmith@somenet.foo>
+To: "redmine@somenet.foo" <redmine@somenet.foo>
+Subject: Re: =?iso-2022-jp?b?GyRCJUYlOSVIGyhCCg=?=
+Date: Fri, 1 Jun 2012 14:39:38 +0200
+Message-ID: <87C31D42249DD0489D1A1444E3232DD7019D6183@foo.bar>
+
+Fixture
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 api.array :queries, api_meta(:total_count => @query_count, :offset => @offset, :limit => @limit) do
   @queries.each do |query|
     api.query do
@@ -8,3 +9,15 @@ api.array :queries, api_meta(:total_count => @query_count, :offset => @offset, :
     end
   end
 end
+=======
+api.array :queries, api_meta(:total_count => @query_count, :offset => @offset, :limit => @limit) do
+  @queries.each do |query|
+    api.query do
+      api.id          query.id
+      api.name        query.name
+      api.is_public   query.is_public?
+      api.project_id  query.project_id
+    end
+  end
+end
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff

@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 this is a text file for upload tests
 with multiple lines
+=======
+this is a text file for upload tests
+with multiple lines
+>>>>>>> 3817f1e30455f4df5135af5f608f1a3912fcf4ff
